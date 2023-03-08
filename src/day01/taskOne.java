@@ -1,4 +1,4 @@
-package task01;
+package day01;
 
 public class taskOne {
     int a = 5;
