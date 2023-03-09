@@ -4,17 +4,19 @@ import java.util.Scanner;
 
 public class Bmi {
 
-    public static String calculateBmi(double heightInCentimeters, double weightInKilograms) {
+    public static Enum calculateBmi(double heightInCentimeters, double weightInKilograms) {
         double BMI = weightInKilograms / (heightInCentimeters * heightInCentimeters);
 
+        enum BmiValue { UNDERWEIGHT, NORMAL, OVERWEIGHT, OBESE};
+
         if(BMI < 18.5)
-            return "Underweight";
+            return BmiValue.UNDERWEIGHT;
         else if (BMI <25)
-            return "Normal";
+            return BmiValue.NORMAL;
         else if(BMI < 30)
-            return "Overweight";
+            return BmiValue.OVERWEIGHT;
         else
-            return "Obese";
+            return BmiValue.OBESE;
     }
 
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class Bmi {
         Scanner scan = new Scanner(System.in);
         double weightInKilograms;
         double heightInCentimeters;
-        String BMI_Result;
+        Enum BMI_Result;
         System.out.println("Please enter the weight in kg: ");
         weightInKilograms = scan.nextDouble();
         System.out.println("Please enter your height in cm: ");

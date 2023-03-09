@@ -11,7 +11,7 @@ class BmiTest {
         double heightInCentimeters = 1.70;
         double weightInKilograms = 70;
 
-        String Bmi_Result = Bmi.calculateBmi(heightInCentimeters, weightInKilograms);
+        Enum Bmi_Result = Bmi.calculateBmi(heightInCentimeters, weightInKilograms);
         assertEquals("Normal", Bmi_Result);
 
     }
@@ -21,7 +21,7 @@ class BmiTest {
         double heightInCentimeters = 1.80;
         double weightInKilograms = 40;
 
-        String Bmi_Result = Bmi.calculateBmi(heightInCentimeters, weightInKilograms);
+        Enum Bmi_Result = Bmi.calculateBmi(heightInCentimeters, weightInKilograms);
         assertEquals("Underweight", Bmi_Result);
     }
 
@@ -30,7 +30,7 @@ class BmiTest {
         double heightInCentimeters = 1.60;
         double weightInKilograms = 80;
 
-        String Bmi_Result = Bmi.calculateBmi(heightInCentimeters, weightInKilograms);
+        Enum Bmi_Result = Bmi.calculateBmi(heightInCentimeters, weightInKilograms);
         assertEquals("Overweight", Bmi_Result);
     }
 
@@ -39,7 +39,7 @@ class BmiTest {
         double heightInCentimeters = 1.50;
         double weightInKilograms = 100;
 
-        String Bmi_Result = Bmi.calculateBmi(heightInCentimeters, weightInKilograms);
+        Enum Bmi_Result = Bmi.calculateBmi(heightInCentimeters, weightInKilograms);
         assertEquals("Obese", Bmi_Result);
     }
 
